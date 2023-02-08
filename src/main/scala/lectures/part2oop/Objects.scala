@@ -34,7 +34,7 @@ object Objects extends App {
   /* Scala object = singleton instance which means when object Person is defined that Person is itself only an istance and no further
   Instantiation is possible */
 
-  val mary = new Person
+  val mary = new Person 
   val john = new Person
 
   println("mary is equal to john or not : "+{mary == john})

@@ -44,5 +44,5 @@ object AbstractDataTypes extends App {
   croc.eat
 }
 
-// Any -> Any ref  -> String , List, Set, -> Scala null -> Scala.nothing
+// Any -> Any ref  -> String , List, Set, -> Scala null  -> Scala.nothing
 //     -> Scala.AnyVal -> Int, unit, Boolean, Float     -> Scala.nothing
