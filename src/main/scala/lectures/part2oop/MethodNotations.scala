@@ -25,5 +25,5 @@ object MethodNotations extends  App {
 
   // prefix notation
 
-  val x = -2
+  val x = -3
 }
