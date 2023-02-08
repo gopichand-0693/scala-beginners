@@ -6,7 +6,7 @@ object InheritanceAndTraits extends App{
     // small little method called eat
 
     val creature  = "wild"
-    final def eat = println("nomnom")
+    def eat = println("nomnom")
 
     /* final def eat = println("nomnom") // prevent overriding */
     private def eating = println("this is private")
