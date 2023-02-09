@@ -24,19 +24,21 @@ object Anonymousclasses extends App {
   println(funnyAnimal.getClass)
 
   class Person(name: String){
-    def sayHi: Unit = println(s"Hi , my name is $name, how can I help")
+    def sayHi: Unit = println(s"Hi , my name is ${this.name}, how can I help")
   }
 
   val sim  = new Person("Jim") {
-    override def sayHi: Unit = println(s"Hi my name is $this, how may I help you.")
+    override def sayHi: Unit = println(s"Hi my name is Jim, how may I help you.")
   }
 
   /*
   1. Generic trait Mypredicate[T]
-  2. Generic triat Mytransformer[A, B]
-  *
-  *
-  *
-  * */
+  2. Generic triat Mytransformer[A, B] => type A into type B
+  3. MyList:
+  *       -map(transformer)  => MyList
+  *       -filter(predicate) => MyList
+  *       -faltMap(transformer from A to MyList[B]) => MyList[B]
+  */
 
+  
 }
