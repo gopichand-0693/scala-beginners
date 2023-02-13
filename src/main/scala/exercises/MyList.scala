@@ -25,6 +25,11 @@ abstract class MyList[+A] {
 
   override def toString: String = "["+printElements+"]"
 
+//  def map[B](transformer: MyTransformer[A,B]):MyList[B]
+//
+//  def flatMap[B](transformer: MyTransformer[A,B]):MyList[B]
+//
+//  def filter(predicate: MyPredicate[A]):MyList[A]
 }
 
 object Empty extends MyList[Nothing]{ // objects can extend classes
@@ -36,6 +41,12 @@ object Empty extends MyList[Nothing]{ // objects can extend classes
 
   def printElements : String = ""
 
+//  def map[B](transformer: MyTransformer[A, B]): MyList[B] = Empty
+//
+//  def flatMap[B](transformer: MyTransformer[A, B]): MyList[B] = Empty
+//
+//  def filter(predicate: MyPredicate[A]): MyList[A] = Empty
+
 }
 
 class Cons[+A](h:A, t:MyList[A]) extends MyList[A]{
@@ -45,6 +56,12 @@ class Cons[+A](h:A, t:MyList[A]) extends MyList[A]{
   def add[B >: A](element: B): MyList[B] = new Cons(element, this)
 
   def printElements: String = if (t.isEmpty) "" + h else  t.printElements +" "+ h
+
+//  def map[B](transformer: MyTransformer[A, B]): MyList[B] = Empty
+//
+//  def flatMap[B](transformer: MyTransformer[A, B]): MyList[B] = Empty
+//
+//  def filter(predicate: MyPredicate[A]): MyList[A] = Empty
 }
 
 
@@ -59,6 +76,15 @@ object ListTest extends  App {
 
 
  }
+
+//trait MyPredicate[-T]{
+//  def test(element:T) :Boolean
+//}
+//
+//trait MyTransformer[-A, B] {
+//  def transform(elem: A): B
+//}
+
 
 
 

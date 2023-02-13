@@ -3,6 +3,7 @@ package lectures.part2oop
 object CaseClasses extends App {
 
   /*
+  *   Quick light weight data structures with little boilerplate
   *   equals, hashcode, toString
   * */
 
@@ -31,7 +32,7 @@ object CaseClasses extends App {
   val mary = Person("mary", 34) // no need for the key word new, cos of apply method
 
   // Serializable , which is gret for distributed systems
-  
-  case object abcd
+
+  case object abcd {}
 
 }
