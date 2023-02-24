@@ -9,7 +9,7 @@ object CaseClasses extends App {
 
   case class Person( name:String, age:Int)
   // only diff is the key word key
-  // but this Key word most powerfull as it does multiple things
+  // but this Key word most power full as it does multiple things
   // 1. class params are auto converted to fields
   val jim = Person("Jim", 26)
   println(jim.name)

@@ -25,10 +25,10 @@ object AbstractDataTypes extends App {
     }
   }
 
-  // triats vs abstact classes
-  // 1- traits do not have constuctor parameters
+  // traits vs abstract classes
+  // 1- traits do not have constructor parameters
   // 2- multiple traits may be inherited by the same class
-  // 3- traits = behavior, but abstact class  is a type of "thing"
+  // 3- traits = behavior, but abstract class  is a type of "thing"
 
 
   class  Crocodile extends Animal with Carnivore {

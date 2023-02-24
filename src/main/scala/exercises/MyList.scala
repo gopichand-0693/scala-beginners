@@ -13,7 +13,7 @@ abstract class MyList[+A]{
  3     cons
       /   \
      4     cons
-           /  \ 
+           /  \
           4    Empty
   */
 
