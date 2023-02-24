@@ -33,6 +33,7 @@ object CaseClasses extends App {
 
   // Serializable , which is gret for distributed systems
 
-  case object abcd {}
+  /*
+  1. create a generic trait called */
 
 }
