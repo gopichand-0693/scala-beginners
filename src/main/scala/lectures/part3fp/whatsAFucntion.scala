@@ -5,10 +5,10 @@ object whatsAFucntion extends App {
   /* The whole purpose of the fp lectures is
   * to use and work with functions as first class elements
   * which means we want to work with functions like we work with  plain values
-  * that's the dream
-  * The problem how ever is we come from OO world where everything is an object
+  * like pass functions as params and use fucnts as values that's the dream.
+  * The problem however is we come from OO world where everything is an object
   * meaning every thing is an instance of some kind of class
-  * this is Jvm is originally designed for Java , only the instances of classes and nothig else
+  * this is Jvm is originally designed for Java , only the instances of classes and nothing else
   * the only way you could simulate FP is to use classes  and instances of those classes */
 
 
@@ -16,7 +16,7 @@ object whatsAFucntion extends App {
 
   // we need to instantiate this classs either anonymously or non anonymously
   class Action_1{
-    def execute(element:Int) : String = ???
+    def execute(element:Int) : String = "Hellow world"
 
   }
 
@@ -62,6 +62,8 @@ object whatsAFucntion extends App {
     override def apply(a: Int, b: Int): Int = a+b
   }
 
+  println(adder(2,2))
+
   /*
   val adder : Function2[Int, Int, Int] =  new Function2[Int, Int, Int]{
     override def apply(a: Int, b: Int): Int = a+b
@@ -88,7 +90,7 @@ object whatsAFucntion extends App {
   3. define a function which takes an Int and returns another func
 
   -- what the type of this function
-  -- how to do it 
+  -- how to do it
    */
 
 
