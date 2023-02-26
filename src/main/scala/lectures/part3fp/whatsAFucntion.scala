@@ -2,14 +2,16 @@ package lectures.part3fp
 
 object whatsAFucntion extends App {
 
-  /* The whole purpose of the fp lectures is
-  * to use and work with functions as first class elements
-  * which means we want to work with functions like we work with  plain values
-  * like pass functions as params and use fucnts as values that's the dream.
-  * The problem however is we come from OO world where everything is an object
-  * meaning every thing is an instance of some kind of class
-  * this is Jvm is originally designed for Java , only the instances of classes and nothing else
-  * the only way you could simulate FP is to use classes  and instances of those classes */
+  /*
+  The whole purpose of the fp lectures is
+  to use and work with functions as first class elements
+  which means we want to work with functions like we work with  plain values
+  like pass functions as params and use fucntions as values that's the dream.
+  The problem however is we come from OO world where everything is an object
+  meaning every thing is an instance of some kind of class
+  this is Jvm is originally designed for Java , only the instances of classes and nothing else
+  the only way you could simulate FP is to use classes  and instances of those classes
+  */
 
 
   // Here we have a class and a method say execute  which takes int and string  below
@@ -58,7 +60,7 @@ object whatsAFucntion extends App {
 
   print(StringToIntConverter("20")+4)
 
-  val adder =  new Function2[Int, Int, Int]{
+  val adder : (Int, Int)=> Int =  new Function2[Int, Int, Int]{
     override def apply(a: Int, b: Int): Int = a+b
   }
 
@@ -86,12 +88,39 @@ object whatsAFucntion extends App {
 
   /*
   1.a func which take 2 strings and concatenate them
-  2.transform the MyPredicate and MyTransformer into function types
+  2.go to MyList Implementation and transform the MyPredicate and MyTransformer into function types
   3. define a function which takes an Int and returns another func
-
   -- what the type of this function
   -- how to do it
    */
+
+  def concatenator = new Function2[String, String, String] {
+    override def apply(v1: String, v2: String): String = v1+" "+v2
+  }
+
+
+  println(concatenator("Hello" , "world"))
+
+  // HOF that return the fucn as return type
+
+  //Fuction1[Int, Function1[Int, Int]]
+
+  val superAdder : Function1[Int, Function1[Int, Int]] = new Function[Int, Function1[Int, Int]]{
+    override def apply(x: Int): Int => Int = new Function1[Int, Int] {
+      override def apply(y: Int): Int =
+        x+y
+    }
+  }
+
+  val added = superAdder(30)
+  println(added(40))
+
+  // or
+
+  println("or a curried version of added is :") 
+
+  println("Curried version superAdder(30)(40) " + superAdder(30)(40))
+
 
 
 

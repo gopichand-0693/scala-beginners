@@ -8,9 +8,9 @@ object AnonymousFunctions extends App {
   }
 
   /* In Scala we just do that by deleting all the scrap and just
-  * wrting like below code with less boiler plate or   syntactic sugar */
+  * writing like below code with less boiler plate or   syntactic sugar */
 
-  // Called as Anonymous func call Lambda
+  // Called as Anonymous func call Lambda,  name comes from lambda calculus  
 
   val doubling : ((Int, Int) => Int) = (x, y) => x*2 +y
 
@@ -26,7 +26,7 @@ object AnonymousFunctions extends App {
 
   println(jusDoSomething())
   println(jusDoSomething)
-  // while calling Lambdas we must use with paranthesis to execute , u need to be very areful
+  // while calling Lambdas we must use with parenthesis to execute , u need to be very careful
 
   // another way of writing lambda
   // Curly braces
@@ -39,12 +39,17 @@ object AnonymousFunctions extends App {
 
   val niceIncrementer: Int => Int = x => x+ 1
 
-  // can be writtenas
+  // can be written as
 
-  val nicIcrementer: Int => Int = _+1 // euivalent to x=> x+1
+  //val niceIncrementer: Int => Int = _+1 // _+1 equivalent to x=> x+1
 
-  val niceAdded:(Int, Int) => Int = _+_ //equivalent to (a,b) => a+b
+  val niceAdded:(Int, Int) => Int = _+_ //  _+_ equivalent to (a,b) => a+ and (Int, Int) => Int type mentions is necessary
+  
+  /*
+  Go to MyList ; replace all functionX calls with lambdas 
+  rewrite the special adder as an anonymous function
+  * */
 }
 
 /*
-* */
+ */
